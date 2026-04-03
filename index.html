@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal & Industry Values</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #005bb5;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 14px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        nav button:hover {
+            background-color: #003d80;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .main-photo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 70%;        /* Example size */
+            max-width: 400px;   /* Limits size on large screens */
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        section {
+            display: none; /* All sections hidden by default */
+        }
+
+        section.active {
+            display: block; /* Show the active section */
+        }
+
+        h1, h2 {
+            color: #0073e6;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Personal & Industry Website</h1>
+    </header>
+    <nav>
+        <button onclick="showSection('personal')">Personal Values</button>
+        <button onclick="showSection('industry')">Industry & Cybersecurity</button>
+    </nav>
+
+    <div class="container">
+        <!-- Personal Values Section -->
+         <div style="text-align: center; margin-bottom: 20px;">
+    <img src=what-we-offer_cybersecurity.jpg width="300" height="200" alt="My Personal Photo">
+</div>
+         <div style="text-align: center; margin-bottom: 20px;">
+        <section id="personal" class="active">
+            <h2>My Personal Values</h2>
+            <h3>Provider</h3>
+            <p> - I am a provider to my family and to my coworkers </p>
+            <p> - I provide first, take last </p>
+            <p> - I work for those I love, not myself </p>
+
+            <h3>Protector</h3>
+            <p> - I protect those I love with my life </p>
+            <p> - I spare no expense to protect loved ones and the things I have built </p>
+            <p> - I accept my responsibility of those I am steward over </p>
+
+            <h3>Honesty</h3>
+            <p> - I must always tell the truth </p>
+            <p> - I must never lie for my own personal gain </p>
+            <p> - Honesty is more important than being right </p>
+
+            <h3>Humility</h3>
+            <p> - I accept when I am wrong </p>
+            <p> - I must put pride out of the way </p>
+            <p> - I must be pragmatic, not focused on personal gain </p>
+
+        </section>
+
+        <!-- Industry & Cybersecurity Section -->
+         <div style="text-align: left; margin-bottom: 20px;">
+        <section id="industry">
+            <h2>Industry & Cybersecurity Best Practices</h2>
+            <p>Cybersecurity is essential to protect sensitive data and maintain trust in modern industries.</p>
+            <h3>Best Practices</h3>
+            <ul>
+                <li><strong>Use strong passwords:</strong> Create complex, unique passwords for all accounts.</li>
+                <li><strong>Enable multi-factor authentication (MFA):</strong> Adds an extra layer of security beyond passwords.</li>
+                <li><strong>Regular software updates:</strong> Keep all systems and applications patched to prevent exploits.</li>
+                <li><strong>Employee training:</strong> Ensure everyone is aware of phishing and social engineering threats.</li>
+                <li><strong>Data backups:</strong> Regularly back up critical data to prevent loss from attacks.</li>
+                <li><strong>Network monitoring:</strong> Detect suspicious activity early and respond quickly.</li>
+            </ul>
+            <h3>Conclusion</h3>
+            <p>Following these best practices helps industries stay secure, reduce risks, and maintain the trust of customers and stakeholders.</p>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript function to switch sections
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
